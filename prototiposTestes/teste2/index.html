@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html onkeydown="detecta(event)">
+ <head>
+    <title>Apostila JavaScript Progressivo</title>
+    <script type="text/javascript" src="script.js"></script>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+    </style>
+ </head>
+ <body>
+
+ <img src="../teste1/imagens/1px.png" alt="png" height="40px">
+ <script src="scripts/transform.js"></script>
+ <script>
+
+    function movimento(x,y){
+        let movimento = document.querySelectorAll("img")[0].style
+        let EixoX=transformSI(movimento.marginLeft)
+        let EixoY=transformSI(movimento.marginTop)
+        EixoX=transformIS(EixoX += x)
+        EixoY=transformIS(EixoY += y)
+        movimento.marginLeft = EixoX
+        movimento.marginTop = EixoY
+
+
+
+
+
+    }
+    function detecta(event){
+    var tecla = event.key;
+    if (tecla == "d"){
+        movimento(20,0);
+        return 0
+    }
+    if (tecla == "w"){
+        movimento(0,-20);
+        return 0
+    }
+    if (tecla == "a"){
+        movimento(-20,0);
+        return 0
+    }
+    if (tecla == "s"){
+        movimento(0,20);
+        return 0
+    }
+
+}
+ </script>
+ </body>
+</html>
