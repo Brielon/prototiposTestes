@@ -15,22 +15,8 @@
 
  <img src="../teste1/imagens/1px.png" alt="png" height="40px">
  <script src="scripts/transform.js"></script>
+ <script src="scripts/movimento.js"></script>
  <script>
-
-    function movimento(x,y){
-        let movimento = document.querySelectorAll("img")[0].style
-        let EixoX=transformSI(movimento.marginLeft)
-        let EixoY=transformSI(movimento.marginTop)
-        EixoX=transformIS(EixoX += x)
-        EixoY=transformIS(EixoY += y)
-        movimento.marginLeft = EixoX
-        movimento.marginTop = EixoY
-
-
-
-
-
-    }
     function detecta(event){
     var tecla = event.key;
     if (tecla == "d"){
